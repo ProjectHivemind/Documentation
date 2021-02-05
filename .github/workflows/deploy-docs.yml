@@ -28,5 +28,5 @@ jobs:
       - name: Check out my other private repo
         uses: actions/checkout@master
         with:
-          repository: projecthivemind/framework
+          repository: projecthivemind/implantframework
           token: ${{ secrets.GITHUB_TOKEN }}
