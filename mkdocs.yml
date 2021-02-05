@@ -1,4 +1,6 @@
 site_name: Hivemind
+repo_url: https://github.com/ProjectHivemind
+repo_name: ProjectHivemind
 
 nav:
   - Home: index.md
@@ -9,6 +11,11 @@ theme:
     repo: fontawesome/brands/git-alt
   palette:
     scheme: preference
+  features:
+    - navigation.tabs
     
 plugins:
   - monorepo
+  - search:
+      prebuild_index: true
+      lang: en
