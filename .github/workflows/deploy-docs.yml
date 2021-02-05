@@ -10,19 +10,12 @@ on:
 #   pull_request:
 #     branches: [ main ]
     
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
         
       - name: Check out my other repo
@@ -34,34 +27,24 @@ jobs:
       - name: Install doxygen
         run: sudo apt-get install doxygen 
       - name: Create Build Environment
-        # Some projects don't allow in-source building, so create a separate build directory
-        # We'll use this as our working directory for all subsequent commands
         run: cmake -E make_directory ${{github.workspace}}/build
       
       - name: Get Doxybook2 and add to path
         working-directory: ${{github.workspace}}
         shell: bash
-        run: sh ./getDoxybook2.sh; sudo mv ./doxybook2/bin/doxybook2 /bin/ 
+        run: sh ./getDoxybook2.sh; sudo mv ./doxybook2/bin/doxybook2 /usr/bin/ 
 
       - name: Configure CMake for Framework
-        # Use a bash shell so we can use the same syntax for environment variable
-        # access regardless of the host operating system
         shell: bash
         working-directory: ${{github.workspace}}/build
-        # Note the current convention is to use the -S and -B options here to specify source 
-        # and build directories, but this is only available with CMake 3.13 and higher.  
-        # The CMake binaries on the Github Actions machines are (as of this writing) 3.12
         run: cmake $GITHUB_WORKSPACE/ImplantFramework
 
       - name: Build Framework docs
         working-directory: ${{github.workspace}}/build
         shell: bash
-        # Execute the build.  You can specify a specific target with "--target <NAME>"
         run: make Doxybook2
 
       - name: Test
         working-directory: ${{github.workspace}}/build
         shell: bash
-        # Execute tests defined by the CMake configuration.  
-        # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
         run: ls -la; ls -la ./docs/out
