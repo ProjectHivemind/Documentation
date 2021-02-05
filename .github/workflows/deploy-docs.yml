@@ -29,4 +29,4 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: projecthivemind/framework
-          token: ${{ secrets.my_pat }}
+          token: ${{ secrets.GITHUB_TOKEN }}
