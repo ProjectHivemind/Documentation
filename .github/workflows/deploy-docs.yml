@@ -47,7 +47,7 @@ jobs:
       - name: Copy output to correct folder
         working-directory: ${{github.workspace}}/framework
         shell: bash
-        run: cp -r $GITHUB_WORKSPACE/docs/out/* ./
+        run: cp -r $GITHUB_WORKSPACE/build/docs/out/* ./
         
       - name: Set up Python 3.7 
         uses: actions/setup-python@v2 
