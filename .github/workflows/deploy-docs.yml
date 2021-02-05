@@ -32,7 +32,7 @@ jobs:
       - name: Get Doxybook2 and add to path
         working-directory: ${{github.workspace}}
         shell: bash
-        run: sh ./getDoxybook2.sh; sudo mv ./doxybook2/bin/doxybook2 /usr/bin/ 
+        run: sh ./getDoxybook2.sh; sudo mv ./doxybook2/bin/doxybook2 /usr/bin/; sudo chmod +x /usr/bin/doxybook2
 
       - name: Configure CMake for Framework
         shell: bash
