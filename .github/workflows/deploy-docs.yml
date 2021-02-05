@@ -46,7 +46,7 @@ jobs:
       - name: Switch Branch
         working-directory: ${{github.workspace}}/ImplantFramwork
         shell: bash
-        run: git switch docs_setup_part2
+        run: git checkout docs_setup_part2
 
       - name: Configure CMake for Framework
         # Use a bash shell so we can use the same syntax for environment variable
