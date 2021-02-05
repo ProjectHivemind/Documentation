@@ -1,0 +1,14 @@
+site_name: Hivemind
+
+nav:
+  - Home: index.md
+  - Framework: '!include ./framework/mkdocs.yml'
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/git-alt
+  palette:
+    scheme: preference
+    
+plugins:
+  - monorepo
