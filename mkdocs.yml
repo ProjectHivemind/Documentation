@@ -1,6 +1,7 @@
 site_name: Hivemind
 repo_url: https://github.com/ProjectHivemind
 repo_name: ProjectHivemind
+edit_uri: ""
 
 nav:
   - Home: index.md
