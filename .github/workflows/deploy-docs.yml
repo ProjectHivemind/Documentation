@@ -45,9 +45,9 @@ jobs:
         run: make Doxybook2
 
       - name: Copy output to correct folder
-        working-directory: ${{github.workspace}}/framework
+        working-directory: ${{github.workspace}}/build
         shell: bash
-        run: ls -la $GITHUB_WORKSPACE/build/docs/out/; cp -r $GITHUB_WORKSPACE/build/docs/out/* ./
+        run: mkdir ../framework; cp -r ./docs/out/* ../framework/
         
       - name: Set up Python 3.7 
         uses: actions/setup-python@v2 
