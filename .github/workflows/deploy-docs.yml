@@ -26,7 +26,8 @@ jobs:
       - uses: actions/checkout@master
         
       - name: Check out my other private repo
-        uses: actions/checkout@master
+        uses: actions/checkout@docs_setup_part2
         with:
-          repository: ProjectHivemind/ImplantFramework@docs_setup_part2
+          repository: ProjectHivemind/ImplantFramework
           token: ${{ secrets.ORG_SEC }}
+          path: ImplantFramework 
