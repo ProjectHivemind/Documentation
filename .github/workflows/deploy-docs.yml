@@ -57,7 +57,7 @@ jobs:
         working-directory: ${{github.workspace}}/build
         shell: bash
         # Execute the build.  You can specify a specific target with "--target <NAME>"
-        run: cmake --build $GITHUB_WORKSPACE/ImplantFramework --target Doxybook2
+        run: cmake --build .
 
       - name: Test
         working-directory: ${{github.workspace}}/build
