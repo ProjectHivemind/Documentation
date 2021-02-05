@@ -28,5 +28,5 @@ jobs:
       - name: Check out my other repo
         uses: actions/checkout@master
         with:
-          repository: ProjectHivemind/ImplantFramework
+          repository: ProjectHivemind/ImplantFramework@docs_setup_part2
           path: ImplantFramework 
