@@ -41,7 +41,7 @@ jobs:
       - name: Get Doxybook2 and add to path
         working-directory: ${{github.workspace}}
         shell: bash
-        run: sh ./getDoxybook2.sh; export PATH=${{github.workspace}}/doxybook2/bin/:$PATH
+        run: sh ./getDoxybook2.sh; export PATH=${{github.workspace}}/doxybook2/bin/:$PATH; cd ImplantFramework; git checkout docs_setup_part2
 
       - name: Configure CMake for Framework
         # Use a bash shell so we can use the same syntax for environment variable
