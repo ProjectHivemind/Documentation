@@ -25,9 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
         
-      - name: Check out my other private repo
+      - name: Check out my other repo
         uses: actions/checkout@master
         with:
           repository: ProjectHivemind/ImplantFramework
-          token: ${{ secrets.ORG_SEC }}
           path: ImplantFramework 
