@@ -26,9 +26,16 @@ jobs:
 
       - name: Install doxygen
         run: sudo apt-get install doxygen 
+        
+      - name: Get Boost
+        run: sudo apt-get install libboost-all-dev
+        
       - name: Create Build Environment
         run: cmake -E make_directory ${{github.workspace}}/build
-      
+        
+      - name: Create Build Environment
+        run: cmake -E make_directory ${{github.workspace}}/build
+        
       - name: Get Doxybook2 and add to path
         working-directory: ${{github.workspace}}
         shell: bash
