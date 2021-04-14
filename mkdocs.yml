@@ -15,6 +15,11 @@ theme:
   features:
     - navigation.tabs
     
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  
 plugins:
   - monorepo
   - search:
