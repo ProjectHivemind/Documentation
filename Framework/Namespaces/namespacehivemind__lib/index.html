@@ -1,0 +1,1528 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+    
+    
+      
+        <title>hivemind_lib - Hivemind</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9299cb39.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hivemind_lib" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hivemind" class="md-header__button md-logo" aria-label="Hivemind" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hivemind
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              hivemind_lib
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/ProjectHivemind" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ProjectHivemind
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        Framework
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hivemind" class="md-nav__button md-logo" aria-label="Hivemind" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hivemind
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/ProjectHivemind" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ProjectHivemind
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Framework
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Framework" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Framework
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/" class="md-nav__link">
+        Design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Developers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Developers" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developing/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prequisites/" class="md-nav__link">
+        Prequisites
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_module/" class="md-nav__link">
+        Creating a Module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_transport/" class="md-nav__link">
+        Creating a Transport
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-documentation" class="md-nav__link">
+    Types Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum-transportselectionmethod" class="md-nav__link">
+    enum TransportSelectionMethod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-packettype" class="md-nav__link">
+    enum PacketType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-errornum" class="md-nav__link">
+    enum ErrorNum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-documentation" class="md-nav__link">
+    Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-init" class="md-nav__link">
+    function Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-registerbot" class="md-nav__link">
+    function RegisterBot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-begincomms" class="md-nav__link">
+    function BeginComms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-addmodule" class="md-nav__link">
+    function AddModule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-addtransport" class="md-nav__link">
+    function AddTransport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-settransportselectionmethod" class="md-nav__link">
+    function SetTransportSelectionMethod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_1" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_2" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_3" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_4" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_5" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_6" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-parsedata" class="md-nav__link">
+    function ParseData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_7" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_8" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-register_module_factory" class="md-nav__link">
+    function REGISTER_MODULE_FACTORY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_9" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-register_module_factory_1" class="md-nav__link">
+    function REGISTER_MODULE_FACTORY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-nlohmann_define_type_non_intrusive_10" class="md-nav__link">
+    function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-register_module_factory_2" class="md-nav__link">
+    function REGISTER_MODULE_FACTORY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-register_transport_factory" class="md-nav__link">
+    function REGISTER_TRANSPORT_FACTORY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-register_transport_factory_1" class="md-nav__link">
+    function REGISTER_TRANSPORT_FACTORY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-register_transport_factory_2" class="md-nav__link">
+    function REGISTER_TRANSPORT_FACTORY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-register_transport_factory_3" class="md-nav__link">
+    function REGISTER_TRANSPORT_FACTORY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-register_transport_factory_4" class="md-nav__link">
+    function REGISTER_TRANSPORT_FACTORY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-register_transport_factory_5" class="md-nav__link">
+    function REGISTER_TRANSPORT_FACTORY
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes-documentation" class="md-nav__link">
+    Attributes Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-controller" class="md-nav__link">
+    variable controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-current_transport" class="md-nav__link">
+    variable current_transport
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="hivemind_lib">hivemind_lib</h1>
+<p>The Hivemind library. ## Classes</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_action/">hivemind_lib::Action</a></strong> <br>Struct used to parse and action received from the teamserver.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_action_response/">hivemind_lib::ActionResponse</a></strong> <br>Struct used to send a response to the teamserver.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_cmd_arg_parse/">hivemind_lib::CmdArgParse</a></strong> <br>Struct for the ping module, used to parse args sent to functions in that module.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_concrete_module_factory/">hivemind_lib::ConcreteModuleFactory</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_concrete_transport_factory/">hivemind_lib::ConcreteTransportFactory</a></strong></td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_error/">hivemind_lib::Error</a></strong> <br>Struct to parse error packet from teamserver.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_gather___info/">hivemind_lib::Gather_Info</a></strong></td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_implant_info/">hivemind_lib::ImplantInfo</a></strong> <br>Stores information on the implant. Including it's primary IP and the UUID given by the teamserver.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_linux_icmp_transport/">hivemind_lib::LinuxIcmpTransport</a></strong> <br>LINUX implementation of the ICMP transport.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_linux_ping_module/">hivemind_lib::LinuxPingModule</a></strong> <br>LINUX Implementation of the PING module.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_linux_tcp_transport/">hivemind_lib::LinuxTcpTransport</a></strong> <br>LINUX implementation of the TCP transport.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_linux_udp_transport/">hivemind_lib::LinuxUdpTransport</a></strong> <br>LINUX implementation of the UDP transport.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_logic_controller/">hivemind_lib::LogicController</a></strong> <br>The "main" of the framework, orchestrates the function of the bot.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_module/">hivemind_lib::Module</a></strong> <br>Abstract class for modules. Forces certain variables and function to be created.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_module_factory/">hivemind_lib::ModuleFactory</a></strong></td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_module_func_info/">hivemind_lib::ModuleFuncInfo</a></strong> <br>Struct used to describe a callable function in this module.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_module_info/">hivemind_lib::ModuleInfo</a></strong> <br>Struct to describe a module.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_packet/">hivemind_lib::Packet</a></strong> <br>Struct used to parse/create packets received and sent to the teamserver.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_ping_arg_parse/">hivemind_lib::PingArgParse</a></strong> <br>Struct for the ping module, used to parse args sent to functions in that module.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_registration_request/">hivemind_lib::RegistrationRequest</a></strong> <br>Struct to create a registration request to register the bot with the teamserver.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_registration_response/">hivemind_lib::RegistrationResponse</a></strong> <br>Used to parse the registration response sent by the teamserver.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_thread_info/">hivemind_lib::ThreadInfo</a></strong> <br>Contains info on a thread.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_transport/">hivemind_lib::Transport</a></strong> <br>Abstract class for transport methods. These are what actually send and recieve data from the central server.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_transport_factory/">hivemind_lib::TransportFactory</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_cmd_module/">hivemind_lib::WindowsCmdModule</a></strong> <br>WINDOWS Implementation of the CMD module.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_icmp_transport/">hivemind_lib::WindowsIcmpTransport</a></strong> <br>WINDOWS implementation of the ICMP transport.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_ping_module/">hivemind_lib::WindowsPingModule</a></strong> <br>WINDOWS Implementation of the PING module.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_tcp_transport/">hivemind_lib::WindowsTcpTransport</a></strong> <br>WINDOWS implementation of the TCP transport.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_udp_transport/">hivemind_lib::WindowsUdpTransport</a></strong> <br>WINDOWS implementation of the UDP transport.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enum</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#enum-transportselectionmethod">TransportSelectionMethod</a></strong> { NONE, ROUND_ROBIN, RANDOM}<br>The methods the framework can select transports for callbacks TODO maybe add more?</td>
+</tr>
+<tr>
+<td>enum</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#enum-packettype">PacketType</a></strong> { ERROR_CODE = -1, NO_ACTION = 0, ACTION_REQUEST = 1, ACTION_CODE = 2, ACTION_RESPONSE_CODE = 3, REGISTRATION_REQUEST_CODE = 4, REGISTRATION_RESPONSE_CODE = 5}<br>Enum for the different kinds of packets the framework sends and receives.</td>
+</tr>
+<tr>
+<td>enum</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#enum-errornum">ErrorNum</a></strong> { NOT_REGISTERED = -1, UNKNOWN_MODULE = -2, UNKNOWN_MODULE_FUNCTION = -3, MISSING_REQUIRED_DATA = -4, MODULE_TIMEOUT = -5, DUPLICATE_REGISTRATION = -6, UNKNOWN_ERROR = -7}<br>Enum for the possible errors that can be sent and received by the framework.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-init">Init</a></strong>()<br>Initialize the library.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-registerbot">RegisterBot</a></strong>()<br>Register the bot with the C&amp;C server.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-begincomms">BeginComms</a></strong>()<br>Start the loop calling to the C&amp;C.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-addmodule">AddModule</a></strong>(const std::string &amp; mod)<br>Add a module to the bot.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-addtransport">AddTransport</a></strong>(const std::string &amp; transport, const std::string &amp; hostname, const std::string &amp; port)<br>Add a transport to the bot.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-settransportselectionmethod">SetTransportSelectionMethod</a></strong>(<a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#enum-transportselectionmethod">TransportSelectionMethod</a> transport_selection_method)<br>Set the transport selection method.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_implant_info/">ImplantInfo</a> , uuid , primary_ip )<br>Generate json parsing functions for struct.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_action_response/">ActionResponse</a> , action_id , response )<br>Generate json parsing functions for struct.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_action/">Action</a> , action_id , module , module_func , arguments )<br>Generate json parsing functions for struct.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_error/">Error</a> , action_id , error_num )<br>Generate json parsing functions for struct.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_registration_request/">RegistrationRequest</a> , ip , implant_name , implant_version , hostname , mac , other_ips , os , supported_modules )<br>Generate json parsing functions for struct.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_packet/">Packet</a> , fingerprint , implant_info , packet_type , num_left , data )<br>Generate json parsing functions for struct.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_registration_response/">RegistrationResponse</a> , uuid )<br>Generate json parsing functions for struct.</td>
+</tr>
+<tr>
+<td>template &lt;typename structType > <br>structType</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-parsedata">ParseData</a></strong>(std::string data)<br>Parses json from string to a struct, used in module functions.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_module_func_info/">ModuleFuncInfo</a> , module_func_name , module_func_desc , param_num , param_names , param_types )<br>Generate json parsing functions for struct.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_module_info/">ModuleInfo</a> , module_name , module_desc , module_funcs )<br>Generate json parsing functions for struct.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-register_module_factory">REGISTER_MODULE_FACTORY</a></strong>(<a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_linux_ping_module/">LinuxPingModule</a> , "PingModule" )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_ping_arg_parse/">PingArgParse</a> , host )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-register_module_factory">REGISTER_MODULE_FACTORY</a></strong>(<a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_cmd_module/">WindowsCmdModule</a> , "CmdModule" )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-nlohmann_define_type_non_intrusive">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</a></strong>(<a href="/Documentation/Framework/Classes/structhivemind__lib_1_1_cmd_arg_parse/">CmdArgParse</a> , cmd )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-register_module_factory">REGISTER_MODULE_FACTORY</a></strong>(<a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_ping_module/">WindowsPingModule</a> , "PingModule" )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-register_transport_factory">REGISTER_TRANSPORT_FACTORY</a></strong>(<a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_linux_icmp_transport/">LinuxIcmpTransport</a> , "ICMP" )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-register_transport_factory">REGISTER_TRANSPORT_FACTORY</a></strong>(<a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_linux_tcp_transport/">LinuxTcpTransport</a> , "TCP" )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-register_transport_factory">REGISTER_TRANSPORT_FACTORY</a></strong>(<a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_linux_udp_transport/">LinuxUdpTransport</a> , "UDP" )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-register_transport_factory">REGISTER_TRANSPORT_FACTORY</a></strong>(<a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_icmp_transport/">WindowsIcmpTransport</a> , "ICMP" )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-register_transport_factory">REGISTER_TRANSPORT_FACTORY</a></strong>(<a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_tcp_transport/">WindowsTcpTransport</a> , "TCP" )</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#function-register_transport_factory">REGISTER_TRANSPORT_FACTORY</a></strong>(<a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_windows_udp_transport/">WindowsUdpTransport</a> , "UDP" )</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>std::unique_ptr&lt; <a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_logic_controller/">LogicController</a> &gt;</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#variable-controller">controller</a></strong></td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/Documentation/Framework/Namespaces/namespacehivemind__lib/#variable-current_transport">current_transport</a></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types-documentation">Types Documentation</h2>
+<h3 id="enum-transportselectionmethod">enum TransportSelectionMethod</h3>
+<table>
+<thead>
+<tr>
+<th>Enumerator</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NONE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ROUND_ROBIN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RANDOM</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The methods the framework can select transports for callbacks TODO maybe add more? </p>
+<h3 id="enum-packettype">enum PacketType</h3>
+<table>
+<thead>
+<tr>
+<th>Enumerator</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERROR_CODE</td>
+<td>-1</td>
+<td></td>
+</tr>
+<tr>
+<td>NO_ACTION</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>ACTION_REQUEST</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>ACTION_CODE</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>ACTION_RESPONSE_CODE</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>REGISTRATION_REQUEST_CODE</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>REGISTRATION_RESPONSE_CODE</td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Enum for the different kinds of packets the framework sends and receives. </p>
+<h3 id="enum-errornum">enum ErrorNum</h3>
+<table>
+<thead>
+<tr>
+<th>Enumerator</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NOT_REGISTERED</td>
+<td>-1</td>
+<td></td>
+</tr>
+<tr>
+<td>UNKNOWN_MODULE</td>
+<td>-2</td>
+<td></td>
+</tr>
+<tr>
+<td>UNKNOWN_MODULE_FUNCTION</td>
+<td>-3</td>
+<td></td>
+</tr>
+<tr>
+<td>MISSING_REQUIRED_DATA</td>
+<td>-4</td>
+<td></td>
+</tr>
+<tr>
+<td>MODULE_TIMEOUT</td>
+<td>-5</td>
+<td></td>
+</tr>
+<tr>
+<td>DUPLICATE_REGISTRATION</td>
+<td>-6</td>
+<td></td>
+</tr>
+<tr>
+<td>UNKNOWN_ERROR</td>
+<td>-7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Enum for the possible errors that can be sent and received by the framework. </p>
+<h2 id="functions-documentation">Functions Documentation</h2>
+<h3 id="function-init">function Init</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="n">Init</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<p>Initialize the library. </p>
+<p><strong>Return</strong>: Status. </p>
+<h3 id="function-registerbot">function RegisterBot</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="n">RegisterBot</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<p>Register the bot with the C&amp;C server. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>info</strong> The information needed to connect to the C&amp;C. </li>
+</ul>
+<h3 id="function-begincomms">function BeginComms</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="n">BeginComms</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<p>Start the loop calling to the C&amp;C. </p>
+<h3 id="function-addmodule">function AddModule</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="n">AddModule</span><span class="p">(</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">mod</span>
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Add a module to the bot. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>mod</strong> <a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_module/">Module</a> to add. TODO add a way for developers to add their own modules by passing a whole <a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_module/">Module</a> Object. </li>
+</ul>
+<h3 id="function-addtransport">function AddTransport</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="n">AddTransport</span><span class="p">(</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">transport</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">hostname</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">port</span>
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Add a transport to the bot. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>transport</strong> <a href="/Documentation/Framework/Classes/classhivemind__lib_1_1_transport/">Transport</a> to add. </li>
+<li><strong>hostname</strong> The host to call back to. </li>
+<li><strong>port</strong> The port to call back to. </li>
+</ul>
+<h3 id="function-settransportselectionmethod">function SetTransportSelectionMethod</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="n">SetTransportSelectionMethod</span><span class="p">(</span>
+    <span class="n">TransportSelectionMethod</span> <span class="n">transport_selection_method</span>
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Set the transport selection method. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>transport_selection_method</strong> The method to use when selecting a transport for callbacks. </li>
+</ul>
+<h3 id="function-nlohmann_define_type_non_intrusive">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">ImplantInfo</span> <span class="p">,</span>
+    <span class="n">uuid</span> <span class="p">,</span>
+    <span class="n">primary_ip</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Generate json parsing functions for struct. </p>
+<h3 id="function-nlohmann_define_type_non_intrusive_1">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">ActionResponse</span> <span class="p">,</span>
+    <span class="n">action_id</span> <span class="p">,</span>
+    <span class="n">response</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Generate json parsing functions for struct. </p>
+<h3 id="function-nlohmann_define_type_non_intrusive_2">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">Action</span> <span class="p">,</span>
+    <span class="n">action_id</span> <span class="p">,</span>
+    <span class="k">module</span> <span class="p">,</span>
+    <span class="n">module_func</span> <span class="p">,</span>
+    <span class="n">arguments</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Generate json parsing functions for struct. </p>
+<h3 id="function-nlohmann_define_type_non_intrusive_3">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">Error</span> <span class="p">,</span>
+    <span class="n">action_id</span> <span class="p">,</span>
+    <span class="n">error_num</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Generate json parsing functions for struct. </p>
+<h3 id="function-nlohmann_define_type_non_intrusive_4">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">RegistrationRequest</span> <span class="p">,</span>
+    <span class="n">ip</span> <span class="p">,</span>
+    <span class="n">implant_name</span> <span class="p">,</span>
+    <span class="n">implant_version</span> <span class="p">,</span>
+    <span class="n">hostname</span> <span class="p">,</span>
+    <span class="n">mac</span> <span class="p">,</span>
+    <span class="n">other_ips</span> <span class="p">,</span>
+    <span class="n">os</span> <span class="p">,</span>
+    <span class="n">supported_modules</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Generate json parsing functions for struct. </p>
+<h3 id="function-nlohmann_define_type_non_intrusive_5">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">Packet</span> <span class="p">,</span>
+    <span class="n">fingerprint</span> <span class="p">,</span>
+    <span class="n">implant_info</span> <span class="p">,</span>
+    <span class="n">packet_type</span> <span class="p">,</span>
+    <span class="n">num_left</span> <span class="p">,</span>
+    <span class="n">data</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Generate json parsing functions for struct. </p>
+<h3 id="function-nlohmann_define_type_non_intrusive_6">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">RegistrationResponse</span> <span class="p">,</span>
+    <span class="n">uuid</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Generate json parsing functions for struct. </p>
+<h3 id="function-parsedata">function ParseData</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">structType</span> <span class="o">&gt;</span>
+<span class="n">structType</span> <span class="n">ParseData</span><span class="p">(</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">data</span>
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Parses json from string to a struct, used in module functions. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>data</strong> The json to parse. </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>structType</strong> The struct type to fill out and return. </li>
+</ul>
+<p><strong>Return</strong>: The struct filled with data from the parsed json. </p>
+<h3 id="function-nlohmann_define_type_non_intrusive_7">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">ModuleFuncInfo</span> <span class="p">,</span>
+    <span class="n">module_func_name</span> <span class="p">,</span>
+    <span class="n">module_func_desc</span> <span class="p">,</span>
+    <span class="n">param_num</span> <span class="p">,</span>
+    <span class="n">param_names</span> <span class="p">,</span>
+    <span class="n">param_types</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Generate json parsing functions for struct. </p>
+<h3 id="function-nlohmann_define_type_non_intrusive_8">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">ModuleInfo</span> <span class="p">,</span>
+    <span class="n">module_name</span> <span class="p">,</span>
+    <span class="n">module_desc</span> <span class="p">,</span>
+    <span class="n">module_funcs</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Generate json parsing functions for struct. </p>
+<h3 id="function-register_module_factory">function REGISTER_MODULE_FACTORY</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">REGISTER_MODULE_FACTORY</span><span class="p">(</span>
+    <span class="n">LinuxPingModule</span> <span class="p">,</span>
+    <span class="s">&quot;PingModule&quot;</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-nlohmann_define_type_non_intrusive_9">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">PingArgParse</span> <span class="p">,</span>
+    <span class="n">host</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-register_module_factory_1">function REGISTER_MODULE_FACTORY</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">REGISTER_MODULE_FACTORY</span><span class="p">(</span>
+    <span class="n">WindowsCmdModule</span> <span class="p">,</span>
+    <span class="s">&quot;CmdModule&quot;</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-nlohmann_define_type_non_intrusive_10">function NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE</span><span class="p">(</span>
+    <span class="n">CmdArgParse</span> <span class="p">,</span>
+    <span class="n">cmd</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-register_module_factory_2">function REGISTER_MODULE_FACTORY</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">REGISTER_MODULE_FACTORY</span><span class="p">(</span>
+    <span class="n">WindowsPingModule</span> <span class="p">,</span>
+    <span class="s">&quot;PingModule&quot;</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-register_transport_factory">function REGISTER_TRANSPORT_FACTORY</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">REGISTER_TRANSPORT_FACTORY</span><span class="p">(</span>
+    <span class="n">LinuxIcmpTransport</span> <span class="p">,</span>
+    <span class="s">&quot;ICMP&quot;</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-register_transport_factory_1">function REGISTER_TRANSPORT_FACTORY</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">REGISTER_TRANSPORT_FACTORY</span><span class="p">(</span>
+    <span class="n">LinuxTcpTransport</span> <span class="p">,</span>
+    <span class="s">&quot;TCP&quot;</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-register_transport_factory_2">function REGISTER_TRANSPORT_FACTORY</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">REGISTER_TRANSPORT_FACTORY</span><span class="p">(</span>
+    <span class="n">LinuxUdpTransport</span> <span class="p">,</span>
+    <span class="s">&quot;UDP&quot;</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-register_transport_factory_3">function REGISTER_TRANSPORT_FACTORY</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">REGISTER_TRANSPORT_FACTORY</span><span class="p">(</span>
+    <span class="n">WindowsIcmpTransport</span> <span class="p">,</span>
+    <span class="s">&quot;ICMP&quot;</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-register_transport_factory_4">function REGISTER_TRANSPORT_FACTORY</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">REGISTER_TRANSPORT_FACTORY</span><span class="p">(</span>
+    <span class="n">WindowsTcpTransport</span> <span class="p">,</span>
+    <span class="s">&quot;TCP&quot;</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="function-register_transport_factory_5">function REGISTER_TRANSPORT_FACTORY</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">REGISTER_TRANSPORT_FACTORY</span><span class="p">(</span>
+    <span class="n">WindowsUdpTransport</span> <span class="p">,</span>
+    <span class="s">&quot;UDP&quot;</span> 
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="attributes-documentation">Attributes Documentation</h2>
+<h3 id="variable-controller">variable controller</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span> <span class="n">LogicController</span> <span class="o">&gt;</span> <span class="n">controller</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="variable-current_transport">variable current_transport</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">current_transport</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<hr />
+<p>Updated on 14 April 2021 at 04:08:29 UTC</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.7353b375.min.js"></script>
+      
+    
+  </body>
+</html>
