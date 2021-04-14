@@ -28,7 +28,7 @@ jobs:
         run: sudo apt-get install doxygen 
         
       - name: Get Boost
-        run: sudo apt-get install libboost-all-dev cmake
+        run: sudo apt-get install libboost-all-dev
         
       - name: Create Build Environment
         run: cmake -E make_directory ${{github.workspace}}/build
@@ -44,7 +44,7 @@ jobs:
       - name: Configure CMake for Framework
         shell: bash
         working-directory: ${{github.workspace}}/build
-        run: cmake $GITHUB_WORKSPACE/ImplantFramework
+        run: cmake $GITHUB_WORKSPACE/ImplantFramework -DBoost_NO_BOOST_CMAKE=ON
 
       - name: Build Framework docs
         working-directory: ${{github.workspace}}/build
