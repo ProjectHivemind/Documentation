@@ -28,7 +28,7 @@ jobs:
         run: sudo apt-get install doxygen 
         
       - name: Get Boost
-        run: sudo apt-get install libboost-all-dev
+        run: sudo apt-get install libboost-all-dev cmake
         
       - name: Create Build Environment
         run: cmake -E make_directory ${{github.workspace}}/build
